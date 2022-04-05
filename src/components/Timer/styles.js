@@ -36,7 +36,7 @@ export const Button = styled.button`
 `;
 
 export const Clock = styled.div`
-    color: var(--white);
+    color: var(--black);
     font-size: 80px;
     font-weight: bold;
 `;
