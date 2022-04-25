@@ -32,11 +32,13 @@ export const Button = styled.button`
     cursor: pointer;
 
     color: var(--white);
+    font-family: "BebasNeue";
     font-size: 35px;
 `;
 
 export const Clock = styled.div`
-    color: var(--white);
+    color: var(--black);
+    font-family: "AlarmClock";
     font-size: 80px;
     font-weight: bold;
 `;

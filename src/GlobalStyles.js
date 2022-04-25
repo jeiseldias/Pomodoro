@@ -1,6 +1,18 @@
 import { createGlobalStyle } from 'styled-components'
+import AlarmClock from './fonts/AlarmClock/alarmclock.ttf';
+import BebasNeue from './fonts/BebasNeue/BebasNeue-Regular.ttf';
 
 export default createGlobalStyle`
+    @font-face {
+        font-family: 'AlarmClock';
+        src: url(${AlarmClock}) format('TrueType');
+    }
+
+    @font-face {
+        font-family: 'BebasNeue';
+        src: url(${BebasNeue}) format('TrueType');
+    }
+
     * {
         margin:0;
         padding:0;
@@ -17,7 +29,7 @@ export default createGlobalStyle`
     }
 
     :root {
-        --primary: #15161e;
+        --primary: #B8C4CC;
         --secondary: #2f3136;
         --tertiary: rgb(32,34,37);
         --quaternary: #292b2f;
