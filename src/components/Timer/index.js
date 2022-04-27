@@ -74,35 +74,35 @@ export default function Timer() {
     function getSecondsPerStep() {
         switch(step) {
             case 1:
-                setSecondsAmount(25 * 1);
+                setSecondsAmount(25 * 60);
                 break;
 
             case 2:
-                setSecondsAmount(5 * 1);
+                setSecondsAmount(5 * 60);
                 break;
             
             case 3:
-                setSecondsAmount(25 * 1);
+                setSecondsAmount(25 * 60);
                 break;
 
             case 4:
-                setSecondsAmount(5 * 1);
+                setSecondsAmount(5 * 60);
                 break;
 
             case 5:
-                setSecondsAmount(25 * 1);
+                setSecondsAmount(25 * 60);
                 break;
 
             case 6:
-                setSecondsAmount(5 * 1);
+                setSecondsAmount(5 * 60);
                 break;
 
             case 7:
-                setSecondsAmount(25 * 1);
+                setSecondsAmount(25 * 60);
                 break;
 
             default:
-                setSecondsAmount(15 * 1);
+                setSecondsAmount(15 * 60);
                 break;
         }
     }
