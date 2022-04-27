@@ -74,35 +74,35 @@ export default function Timer() {
     function getSecondsPerStep() {
         switch(step) {
             case 1:
-                setSecondsAmount(25 * 60);
+                setSecondsAmount(25 * 1);
                 break;
 
             case 2:
-                setSecondsAmount(5 * 60);
+                setSecondsAmount(5 * 1);
                 break;
             
             case 3:
-                setSecondsAmount(25 * 60);
+                setSecondsAmount(25 * 1);
                 break;
 
             case 4:
-                setSecondsAmount(5 * 60);
+                setSecondsAmount(5 * 1);
                 break;
 
             case 5:
-                setSecondsAmount(25 * 60);
+                setSecondsAmount(25 * 1);
                 break;
 
             case 6:
-                setSecondsAmount(5 * 60);
+                setSecondsAmount(5 * 1);
                 break;
 
             case 7:
-                setSecondsAmount(25 * 60);
+                setSecondsAmount(25 * 1);
                 break;
 
             default:
-                setSecondsAmount(15 * 60);
+                setSecondsAmount(15 * 1);
                 break;
         }
     }
@@ -112,29 +112,69 @@ export default function Timer() {
     |---------------------------------------*/
     const minutes = Math.floor(secondsAmount / 60);
     const seconds = secondsAmount % 60;
-    const items = [];
-
-    if(step >= 9) {
-        items.push(<Pomodoro background={"/images/done9.png"} />);
-    } else {
-        items.push(<Pomodoro background={"/images/todo9.png"} />);
-    }
-
-    for(let i=1; i < 9; i++) {
-        if(i !== 4) {
-            if(step >= i) {
-                items.push(<Pomodoro background={"/images/done" + i +".png"} />);
-            } else {
-                items.push(<Pomodoro background={"/images/todo" + i +".png"} />);
-            }
-        } else {
-            items.push(<Pomodoro><Clock>{String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2, '0')}</Clock><Button onClick={clickStart} color={colorButton}>{textButton}</Button></Pomodoro>);
-        }
-    }
 
     return(
         <Container>
-            {items}
+            {step >= 8 ? (
+                <Pomodoro background={"/images/done9.png"} />
+            ) : (
+                <Pomodoro background={"/images/todo9.png"} />
+            )
+            }
+
+            {step >= 1 ? (
+                <Pomodoro background={"/images/done1.png"} />
+            ) : (
+                <Pomodoro background={"/images/todo1.png"} />
+            )
+            }
+
+            {step >= 2 ? (
+                <Pomodoro background={"/images/done2.png"} />
+            ) : (
+                <Pomodoro background={"/images/todo2.png"} />
+            )
+            }
+
+            {step >= 7 ? (
+                <Pomodoro background={"/images/done3.png"} />
+            ) : (
+                <Pomodoro background={"/images/todo3.png"} />
+            )
+            }
+
+            <Pomodoro>
+                <Clock>{String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2, '0')}</Clock>
+                <Button onClick={clickStart} color={colorButton}>{textButton}</Button>
+            </Pomodoro>
+
+            {step >= 3 ? (
+                <Pomodoro background={"/images/done5.png"} />
+            ) : (
+                <Pomodoro background={"/images/todo5.png"} />
+            )
+            }
+
+            {step >= 6 ? (
+                <Pomodoro background={"/images/done6.png"} />
+            ) : (
+                <Pomodoro background={"/images/todo6.png"} />
+            )
+            }
+
+            {step >= 5 ? (
+                <Pomodoro background={"/images/done7.png"} />
+            ) : (
+                <Pomodoro background={"/images/todo7.png"} />
+            )
+            }
+
+            {step >= 4 ? (
+                <Pomodoro background={"/images/done8.png"} />
+            ) : (
+                <Pomodoro background={"/images/todo8.png"} />
+            )
+            }
         </Container>
     )
 }
