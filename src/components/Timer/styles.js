@@ -1,29 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    display: grid;
-
-    grid-area: "TM";
-    grid-template-columns: 250px 250px 250px;
-    grid-template-rows: 150px 150px 150px;
+    width: 100vw;
+    height: 100vh;
     
-    grid-template-areas: 
-        'PM1 PM2 PM3'
-        'PM4 PM5 PM6'
-        'PM7 PM8 PM9';
-
-    overflow: hidden;
-
-    grid-area: "TM";
-    align-self: center;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: var(--primary);
 `;
 
 export const Button = styled.button`
-    padding: 5px 10px;
-    min-width: 220px;
+    padding: 0.5vw 3vw;
+    min-width: 10vw;
 
     border: 1px solid ${(props) => `var(--${props.color})`};
     border-radius: 10px;
@@ -33,26 +23,33 @@ export const Button = styled.button`
 
     color: var(--white);
     font-family: "BebasNeue";
-    font-size: 35px;
+    font-size: 2vw;
 `;
 
 export const Clock = styled.div`
     color: var(--black);
     font-family: "AlarmClock";
-    font-size: 80px;
+    font-size: 5vw;
     font-weight: bold;
 `;
 
+export const Grid = styled.div`
+    width: 750px;
+    height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+`;
+
 export const Pomodoro = styled.div`
-    grid-area: "PM1";
+    width: 33%;
+    height: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 250px;
-    height: 150px;
-
-    background-image: ${(props) => `url('${props.background}')`};
+    align-self: center;
 `;
